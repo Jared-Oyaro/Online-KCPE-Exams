@@ -8,6 +8,11 @@ var data = [
     ],
     get corrAns () {
       return this.answers[1];
+    },
+    get explanation () {
+      return this.corrAns + ` : Kenya did gained independence in 1963 from the
+      British colonizers. Mzee Jomo Kenyatta was actively involved in the struggle
+      for independence become the first president of Kenya.`;
     }
   },
 
@@ -48,10 +53,14 @@ function generateQuzz() {
      const BTN = document.createElement('button');
      BTN.classList.add('btn');
      BTN.innerHTML = ans;
-     document.querySelector('.answers').appendChild(BTN);
+     var ans = document.querySelector('.answers');
+     ans.appendChild(BTN);
      BTN.addEventListener('click', () => {
         if (BTN.innerHTML == data[count].corrAns) {
           alert('Correct!');
+          var para = document.createElement('p');
+          para.innerHTML = data[count].explanation;
+          ans.appendChild(para);
         } else {
           alert('Wrong!');
         }
