@@ -8,52 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <!-- navBar -->
-  <div class="navBar">
-    <div class="container flex">
-      <h1>KCPE Online</h1>
-      <nav>
-        <ul>
-          <li>
-            <!-- <i class="fas fa-clinic-medical"></i> -->
-            <a href="#">Home</a>
-          </li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">About us</a></li>
-        </ul>
-      </nav>
-    </div>
+  <h1>Questions App</h1>
+  <!-- wrapper -->
+  <div class="wrapper grid">
+     <div class="quzz card">
+       <h4 class="q"></h4>
+        <div class="answers"></div>
+         <button class="btn btn-primary">next</button>
+     </div>
+     <div class="card">
+       <h2>Results:</h2>
+     </div>
   </div>
-
-  <!-- introduction -->
-  <section class="showcase">
-    <div class="container grid">
-      <div class="showcase-text">
-      <h1>Prepare for Exams with Exams</h1>
-      <p>Lets found out with full paper of your choice.
-      </p>
-      <a href="#"><button class="btn-primary">Read More</button></a>
-    </div>
-      <div class="showcase-form card">
-        <h2>Take Exam</h2>
-        <form>
-          <div class="form-control">
-            <input type="text" name="name" placeholder="Student Name" autocomplete="off" required>
-          </div>
-          <div class="form-control">
-             <select name="subject" id="subject">
-               <option value="select subject" selected disabled>select subject</option>
-               <option value="English">English</option>
-               <option value="Kiswahili">Kiswahili</option>
-               <option value="Maths">Maths</option>
-               <option value="Science">Science</option>
-             </select>
-          </div>
-          <input type="submit" value="Start Exam" class="btn">
-        </form>
-      </div>
-    </div>
-  </section>
+   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
