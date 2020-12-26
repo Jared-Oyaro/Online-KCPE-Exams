@@ -41,29 +41,4 @@ var data = [
   },
 ]
 
-var count = 0;
-document.addEventListener('DOMContentLoaded', () => {
-  generateQuzz();    
-});
 
-function generateQuzz() {
-  var question = document.querySelector('.q');
-   question.innerHTML = data[count].question;
-   data[count].answers.forEach(ans => {
-     const BTN = document.createElement('button');
-     BTN.classList.add('btn');
-     BTN.innerHTML = ans;
-     var ans = document.querySelector('.answers');
-     ans.appendChild(BTN);
-     BTN.addEventListener('click', () => {
-        if (BTN.innerHTML == data[count].corrAns) {
-          alert('Correct!');
-          var para = document.createElement('p');
-          para.innerHTML = data[count].explanation;
-          ans.appendChild(para);
-        } else {
-          alert('Wrong!');
-        }
-     })
-   });
-}

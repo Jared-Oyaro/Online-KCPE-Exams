@@ -14,6 +14,17 @@ ul {
 }
 
 
+.anss {
+  display: inline;
+  /* margin-left: 5px; */
+}
+label {
+  margin-left: 5px;
+}
+.answer{
+  display: flex;
+  margin: 10px 2px;
+}
 
 
 a {
