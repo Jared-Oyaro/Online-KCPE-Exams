@@ -112,6 +112,11 @@ p {
   justify-content: center;
 }
 
+.container.center {
+  margin: 40px;
+  justify-content: center;
+}
+
 .contacts {
   display: flex;
   flex-wrap: wrap;
@@ -125,6 +130,7 @@ p {
   color: #fff;
   text-decoration: none;
 }
+ 
  
 .contacts a:hover {
   border-bottom: solid white 3px;
