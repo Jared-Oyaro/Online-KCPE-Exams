@@ -29,6 +29,11 @@ h1,h2 {
   justify-content: space-between;
 }
 
+
+.wrapper .container {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+}
 #search {
   width: 100px;
   height: 25px;
@@ -117,6 +122,16 @@ p {
   outline: none;
 }
 
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: red;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn:hover {
   transform: scale(.98);
 }
@@ -185,4 +200,15 @@ p {
 
 .header h1 {
   margin-left: 10px;
+}
+
+ 
+ 
+.progress-bar {
+  display: flex;
+}
+.edit {
+  width: 20px;
+  height: 20px;
+  border: saddlebrown solid 1px;
 }
