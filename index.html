@@ -44,30 +44,33 @@
 
 <div class="wrapper">
   <div class="container card" id="examCard">
-    <h3 id="quzz">Click Next to start the test</h3>
+    <div class="answers-holder">
+    <h3 id="quzz">Instructions on how to use the app!</h3>
      <div class="answers">
-       <div class="ans1">
-         <input type="radio" name="ans" id="firstAns">
-         <label for="firstAns" id="a"></label>
-       </div>
-       <div class="ans2">
-         <input type="radio" name="ans" id="secondAns">
-         <label for="secondAns" id="b"></label>
-       </div>
-       <div class="ans3">
-         <input type="radio" name="ans" id="thirdAns">
-         <label for="thirdAns" id="c"></label>
-       </div>
-       <div class="ans4">
-         <input type="radio" name="ans" id="fouthAns">
-         <label for="fouthAns" id="d"></label>
-       </div>
+          <div class="ans1">
+            <input type="radio" name="ans" id="firstAns">
+            <label for="firstAns" id="a">Please note once your select an answer you cannot change it.</label>
+          </div>
+          <div class="ans2">
+            <input type="radio" name="ans" id="secondAns">
+            <label for="secondAns" id="b">Once the time allocated for each question ellapse you cannot make a selection.</label>
+          </div>
+          <div class="ans3">
+            <input type="radio" name="ans" id="thirdAns">
+            <label for="thirdAns" id="c">Good luck</label>
+          </div>
+          <div class="ans4">
+            <input type="radio" name="ans" id="fouthAns">
+            <label for="fouthAns" id="d">PRESS NEXT TO START TEST!</label>
+          </div>
+        
+
        <div class="navigation">
-        <!-- <button class="pre-btn btn0 btn">Prev</button> -->
-        <!-- <button class="view-ans-btn btn">View ans</button> -->
          <button class="next-btn btn1 btn">Next</button>
        </div>
+       </div>
      </div>
+     </div> 
    
 </div>
   
@@ -90,6 +93,7 @@
     </h5>
   </div>
 </div>
+   <script type="text/javascript" src="data.js"></script>
    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

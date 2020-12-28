@@ -221,3 +221,17 @@ p {
 .bg-color {
   background-color: springgreen;
 }
+
+.score-output h3 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.score-output input[type=number] {
+   margin-top: 20px;
+   width: 100%;
+   outline: none;
+   border: none;
+   border-bottom: solid gray 1px;
+   padding-bottom: 5px;
+}
