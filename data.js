@@ -44,7 +44,9 @@ let data = [
     answers: ['Kisumu', 'Nairobi', 'Mombasa', 'Dodoma'],
     get corrAns () {
       return this.answers[1];
-    }
+    },
+    image: `<img src="images/sch-logo.png" id='img'>`,
+    title: `<h5 id="imageTitle"> Use the following diagram to answer the questions that follows.</h5>`
   },
 
   {
@@ -79,11 +81,10 @@ let data = [
     }
   },
 
-
   {
     question: 'What is you favourite color?',
     answers: ['blue', 'black', 'white', 'red'],
-    get corrAns () {
+    get csorrAns () {
       return this.answers[0];
     }
   },
@@ -121,7 +122,7 @@ document.getElementById('examCard').insertAdjacentHTML('afterbegin', `<div class
 
    function insertResultDiv() {
      return `<div class="score-output card">
-     <h3>RESULT</h3>
+     <h3 class="center">RESULT</h3>
       <div class="total-quez">
         <input type="number" placeholder="Total Questions: " id ="totQue" readonly>
       </div>
@@ -132,4 +133,15 @@ document.getElementById('examCard').insertAdjacentHTML('afterbegin', `<div class
         <input type="number" placeholder="Percentage: "  id = "per" readonly>
       </div> 
       </div>`;
+   }
+
+
+   function displayNotice() {
+     return `<div>
+       <h5 class="center">Congraturation for finishing your test!</h5>
+       <p id="font">
+         Please note we're looking forward to adding full papers and other subjects.
+         We'are also looking forward to adding more features to the app.
+       </p>
+     </div>`;
    }

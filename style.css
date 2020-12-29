@@ -184,7 +184,7 @@ p {
   /* display: flex; */
   height: 120px;
 }
-
+ 
 .header {
   display: flex;
   padding-top: 8px;
@@ -234,4 +234,18 @@ p {
    border: none;
    border-bottom: solid gray 1px;
    padding-bottom: 5px;
+   font-size: 22px;
+}
+
+#font {
+  font-size: 14px;
+}
+
+.center {
+  text-align: center;
+  color: red;
+}
+
+#a, #b, #c, #d{
+  font-size: 15px;
 }

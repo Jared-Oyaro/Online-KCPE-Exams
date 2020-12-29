@@ -1,19 +1,20 @@
 
 document.addEventListener('DOMContentLoaded', onNextBtnPress);
-
-
 let init = {
-  score : 0,
   radios : Array.from(document.getElementsByName('ans')),
-  index : 0
+  index : 0,
+  answersHolder: document.querySelector('.answers-holder'),
+  score: 0,
+  radios: Array.from(document.getElementsByName('ans'))
 }
 
 
 function onNextBtnPress() {
   const NEXT_BTN = document.querySelector('.btn1'),
         BARS = Array.from(document.getElementsByClassName('edit'));
-
+        
         function loadFunctionalities () {
+            (init.index < 10) && 
             BARS[init.index].classList.add('bg-color');
             resetTimer();
             restartTimer();
@@ -85,6 +86,19 @@ function loadQueAns() {
   init.radios[2].value = data[no].answers[2];
   init.radios[3].value = data[no].answers[3];
 
+  /* add image in the question has one */
+    if (data[no].image) {
+      init.answersHolder.insertAdjacentHTML('afterbegin', data[no].image);
+      init.answersHolder.insertAdjacentHTML('afterbegin', data[no].title);
+    } else {
+      let image = document.getElementById('img'),
+          title = document.getElementById('imageTitle');
+      
+      image && init.answersHolder.removeChild(image);
+      title && init.answersHolder.removeChild(title);
+
+    }
+
 }
 
 
@@ -92,30 +106,37 @@ function loadQueAns() {
 /* determine score */
 init.radios.forEach(rad => {
    rad.addEventListener('click', () => {
-     if (rad.value == data[init.index].corrAns) {
-       init.score++;
-       // remove click eventListener
+     if (rad.value == data[init.index - 1].corrAns) {
+        init.score++;
      }
    });
    
 });
 
 
+ 
+
 /* finish Test */
 function finishTest() {
   const OUTPUTS_DIVS = {
     ansWrapper: document.getElementById('examCard'),
     ansHolder: document.querySelector('.answers-holder'),
+    controller: document.querySelector('#controller'),
   }
   
+  // document.getElementsByTagName('body')[0].removeChild(OUTPUTS_DIVS.controller);
+  OUTPUTS_DIVS.controller.textContent = '';
+  OUTPUTS_DIVS.controller.insertAdjacentHTML("afterbegin", displayNotice());
   OUTPUTS_DIVS.ansWrapper.textContent = '';
   OUTPUTS_DIVS.ansWrapper.insertAdjacentHTML('afterbegin', insertResultDiv());
 
-  document.getElementById('totQue').value = init.index;
-  document.getElementById('corrScore').value = init.score;
-
-  var per = parseInt(init.score * 100) / parseInt(init.index);
-  console.log(per)
+  document.getElementById('totQue').placeholder = 'Total Questions: ' + init.index;
+  document.getElementById('corrScore').placeholder = 'Score: ' + init.score;
+  
+   
+  document.getElementById('per').placeholder = 'Percentage: ' +
+  parseInt(init.score * 100) / parseInt(init.index) + '%';
+   
 
 }
 
