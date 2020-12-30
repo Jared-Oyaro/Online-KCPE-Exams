@@ -14,6 +14,18 @@ let data = [
       return this.answers[0];
     }
   },
+  {
+    question: '',
+    answers: ['Salt', 'Stones', 'Saw dust', 'wax'],
+    get corrAns () {
+      return this.answers[0];
+    },
+    image: `<img src="images/ex.png" id="img">`,
+    title: `<h5 id="imageTitle">  
+    The diagram below shows a set-up that can be used to investigate heat transfer in a liquid.
+     what should be added to the water for the pupils to observe heat transfer?
+    </h5>`
+  },
 
   {
     question: 'Which one of the following is not a programming language?',
@@ -31,13 +43,7 @@ let data = [
     }
   },
 
-  {
-    question: 'Pick the odd one out?',
-    answers: ['Raila', 'Uhuru', 'Obama', 'Trump'],
-    get corrAns () {
-      return this.answers[0];
-    }
-  },
+  
 
   {
     question: 'What is the capital city of Kenya?',

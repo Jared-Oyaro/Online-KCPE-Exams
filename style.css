@@ -29,7 +29,15 @@ h1,h2 {
   justify-content: space-between;
 }
 
+#cont {
+  display: grid;
+  grid-template-columns: repeat(1);
+}
+.subject {
+  padding-left: 15px;
+}
 
+ 
 .wrapper .container {
     display: grid;
     grid-template-columns: repeat(1fr);
@@ -181,7 +189,7 @@ p {
 .nav-bar {
   background-color: var(--primary-color);
   color: #fff;
-  /* display: flex; */
+  display: flex;
   height: 120px;
 }
  
