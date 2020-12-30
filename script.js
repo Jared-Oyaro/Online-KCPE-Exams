@@ -3,12 +3,12 @@
   var marks = new Set();
   let init = {
     radios : Array.from(document.getElementsByName('ans')),
-    radios: Array.from(document.getElementsByName('ans')),
+    nav: document.querySelector('.navigation'),
     index : 0,
     score: 0,
   }
 
-  
+
   let UI_obj = {
     next_btn: document.querySelector('.btn1'),
     progress_bar:  Array.from(document.getElementsByClassName('edit')),
@@ -28,6 +28,10 @@
 
 
    UI_obj.next_btn.addEventListener('click', () => {
+       let warning = document.getElementById('warn');
+       if (warning) {
+         init.nav.removeChild(warning)
+       }
       init.index < 11 && UI_obj.mainController()
    })
 
@@ -61,12 +65,20 @@ function restartTimer() {
       function decrement () { 
         h1.innerHTML = c;
         c--;
-        c <= 5 && h1.classList.add('danger');
+        c <= 4 && h1.classList.add('danger');
+        let warn = `<h5 style="color: red" id="warn">Time lapsed. This question won't count!!!</h5>`;
+        if (c == -1) {
+          if (document.getElementById('warn')) {
+            init.nav.removeChild(document.getElementById('warn'));
+          } else {
+            init.nav.insertAdjacentHTML('beforeend',warn);
+          }
+        }
        }
       h1.innerHTML > 0 && decrement();
     }
 
-  setInterval( () =>  timer(), 1000);
+  setInterval(() => timer(), 1000);
 }
 
 
@@ -103,9 +115,7 @@ function loadQueAns() {
        
        image && que_ans.answersHolder.removeChild(image);
        title && que_ans.answersHolder.removeChild(title);
- 
      }
- 
  }
 
  /* increase score if the write radio button is clicked */
@@ -116,8 +126,6 @@ init.radios.forEach( rad => {
    } 
   })  
 });
-
-
 
 /* finish Test */
 function finishTest() {
@@ -140,8 +148,6 @@ function finishTest() {
   document.getElementById('per').placeholder = 'Percentage: ' +
   (parseInt(marks.size) * 100 ) / parseInt(init.index -1) + '%';
 }
-
-
 
  } () );
 

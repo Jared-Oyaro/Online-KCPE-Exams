@@ -144,9 +144,11 @@ p {
 }
 
 .footer {
-  height: 200px;
+  height: 400px;
   border: solid gray 1px;
   margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container.footer {
