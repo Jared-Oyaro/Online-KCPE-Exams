@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -125,6 +125,7 @@ p {
   border: none;
   border-radius: 5px;
   outline: none;
+  margin-bottom: 5px;
 }
 
 .indicator {
@@ -145,7 +146,6 @@ p {
 
 .footer {
   height: 400px;
-  border: solid gray 1px;
   margin: 10px auto;
   display: flex;
   flex-wrap: wrap;
@@ -158,15 +158,24 @@ p {
   justify-content: center;
 }
 
+
+@media screen and (max-width: 1500px) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contacts {
+    display: inline;
+  }
+}
+
  
 .container.center {
   margin: 40px;
   justify-content: center;
-}
-
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .contacts h5 {
@@ -195,6 +204,9 @@ p {
   height: 120px;
 }
  
+#sec {
+  font-family: 'Abril Fatface', sans-serif;
+}
 .header {
   display: flex;
   padding-top: 8px;
@@ -258,4 +270,8 @@ p {
 
 #a, #b, #c, #d{
   font-size: 15px;
+}
+
+.mgb {
+  padding-bottom: 10px;
 }

@@ -22,7 +22,7 @@
         if (init.index >= 10) {
           this.next_btn.innerHTML = 'Finish';
         }
-        init.index >= 11 && finishTest()
+        init.index >= 11 && finishTest();
     }
   }
 
@@ -122,7 +122,8 @@ function loadQueAns() {
 init.radios.forEach( rad => {
   rad.addEventListener( 'click', () => {
    if (Number(document.getElementById('sec').textContent) > 0) {
-    rad.value ==  marks.add(data[ init.index - 1 ].corrAns);
+    data[ init.index - 1 ].corrAns == rad.value &&
+        marks.add(data[ init.index - 1 ].corrAns);
    } 
   })  
 });
@@ -147,8 +148,16 @@ function finishTest() {
    
   document.getElementById('per').placeholder = 'Percentage: ' +
   (parseInt(marks.size) * 100 ) / parseInt(init.index -1) + '%';
+ 
+  var restartBtn = document.getElementById('restart-btn');
+  if (restartBtn) {
+   restartBtn.addEventListener('click', () => {
+     document.location.reload();
+   })
+  }
+   
 }
-
+  
  } () );
 
 

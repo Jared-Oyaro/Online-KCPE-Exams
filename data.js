@@ -175,7 +175,9 @@ let data = [
       <div class="perc">
         <input type="number" placeholder="Percentage: "  id = "per" readonly>
       </div> 
-       
+       <div class="mgb">
+        <button id ="restart-btn" class="btn" style="margin-top: 20px">Restart</button>
+       </div>
       </div>`;
    }
 
