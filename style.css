@@ -42,14 +42,7 @@ h1,h2 {
     display: grid;
     grid-template-columns: repeat(1fr);
 }
-#search {
-  width: 100px;
-  height: 25px;
-  border: #aaa thin;
-  padding: 4px;
-  outline: none;
-  border-radius: 20px;
-}
+ 
 
 p {
   margin: 10px 0;
@@ -259,6 +252,11 @@ p {
    font-size: 22px;
 }
 
+h4 {
+  margin-top: -20px;
+  margin-bottom: 0px;
+}
+ 
 #font {
   font-size: 14px;
 }
@@ -268,6 +266,13 @@ p {
   color: red;
 }
 
+.footer.grid {
+  gap: 0;
+  display: grid;
+  grid-template-rows: repeat(2,1fr 2fr);
+  /* position: relative; */
+}
+
 #a, #b, #c, #d{
   font-size: 15px;
 }
@@ -275,3 +280,4 @@ p {
 .mgb {
   padding-bottom: 10px;
 }
+ 
