@@ -184,7 +184,7 @@ let data = [
 
    function displayNotice() {
      return `<div>
-       <h5 class="center">Congraturation for finishing your test!</h5>
+       <h4 class="center">Congraturation for finishing your test!</h4>
        <p id="font">
          Please note we're looking forward to adding full papers and other subjects.
          We'are also looking forward to adding more features to the app.

@@ -17,7 +17,7 @@ body {
 }
 
 h1,h2 {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .container {
@@ -280,3 +280,13 @@ h4 {
   padding-bottom: 10px;
 }
  
+#result {
+  border-collapse: collapse;
+}
+
+#result caption {
+  font-weight: 900;
+}
+#result td {
+  padding: 3px;
+}

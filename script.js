@@ -65,17 +65,14 @@ function restartTimer() {
       function decrement () { 
         h1.innerHTML = c;
         c--;
-        c <= 4 && h1.classList.add('danger');
-        let warn = `<h5 style="color: red" id="warn">Time lapsed. This question won't count!!!</h5>`;
-        if (c == -1) {
-          if (document.getElementById('warn')) {
-            init.nav.removeChild(document.getElementById('warn'));
-          } else {
-            init.nav.insertAdjacentHTML('beforeend',warn);
-          }
-        }
+        c <= 9 && h1.classList.add('danger');
        }
-      h1.innerHTML > 0 && decrement();
+      // h1.innerHTML > 0 && decrement();
+      if ( h1.innerHTML > 0) {
+        decrement()
+      } else {
+        h1.innerHTML = 'Time is up!'
+      }
     }
 
   setInterval(() => timer(), 1000);
